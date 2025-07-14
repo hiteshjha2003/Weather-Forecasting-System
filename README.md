@@ -15,8 +15,35 @@ Modular Codebase:
     Organized with a clear separation of concerns, making it maintainable and extensible.
 
 
+Weather Forecasting System/
+├── app.py                         # Main Streamlit application entrypoint
+├── data_loading.py                # Data loading utilities
+├── data_preprocessing.py          # Data preprocessing pipeline
+├── db.sql                        # SQL Server schema & setup script
+├── eda.py                        # EDA functions and plot generation
+├── eda_plots/                    # Directory for saved EDA plot images
+├── models/                       # Saved models & metadata files
+│   ├── adaptive_drop_patch_model.pth
+│   ├── adaptive_drop_patch_model.json
+├── models_trainings/             # Core ML training, dataset, transformer implementation
+│   ├── __init__.py
+│   ├── config.py
+│   ├── dataset.py
+│   ├── forecast_cli.py
+│   ├── plot_app.py
+│   ├── test_import.py
+│   ├── train_model.py
+│   ├── transformer.py
+├── requirements.txt              # Python dependencies
+├── sql_connection.py             # SQL Server connection helpers
+├── test.py                      # Misc test scripts
+├── weatherHistory.csv            # Raw weather dataset CSV
+
+
 
 <pre lang="markdown"> <code> ``` xWeather Forecasting System/ ├── app.py # Main Streamlit application entrypoint ├── data_loading.py # Data loading utilities ├── data_preprocessing.py # Data preprocessing pipeline ├── db.sql # SQL Server schema & setup script ├── eda.py # EDA functions and plot generation ├── eda_plots/ # Directory for saved EDA plot images ├── models/ # Saved models & metadata files │ ├── adaptive_drop_patch_model.pth │ ├── adaptive_drop_patch_model.json ├── models_trainings/ # Core ML training, dataset, transformer implementation │ ├── __init__.py │ ├── config.py │ ├── dataset.py │ ├── forecast_cli.py │ ├── plot_app.py │ ├── test_import.py │ ├── train_model.py │ ├── transformer.py ├── requirements.txt # Python dependencies ├── sql_connection.py # SQL Server connection helpers ├── test.py # Misc test scripts ├── weatherHistory.csv # Raw weather dataset CSV ``` </code> </pre>
+
+
 The project is organized into a well-structured directory to separate functionalities like data handling, model training, visualization, and database operations. Below is a breakdown of the key files and directories:
 
 app.py: The main entry point for the Streamlit application, orchestrating the user interface and interaction with other modules.
