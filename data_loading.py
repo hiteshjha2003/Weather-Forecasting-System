@@ -20,8 +20,7 @@ def load_data(file_path):
     df = pd.read_csv(file_path)
     print("Dataset Preview:")
     print(df.head())
-    print("\nDataset Info:")
-    print(df.info())
+    print(df.tail())
     return df
 
 if __name__ == "__main__":

@@ -8,3 +8,11 @@ joblib
 matplotlib
 numpy
 openpyxl
+seaborn
+torch
+torchvision
+tqdm
+kaleido
+imbalanced-learn
+
+
