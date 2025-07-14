@@ -291,3 +291,4 @@ The SQL Server integration is optional, allowing users to run the app without a 
 
     Clean, scalable project structure for further development and deployment
 
+
