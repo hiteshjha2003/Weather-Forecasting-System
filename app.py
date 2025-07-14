@@ -133,58 +133,6 @@ if page == "📈 Train Model":
                 except Exception as e:
                     st.error(f"Training failed: {e}")
 
-# --- Forecasting Page ---
-
-#     st.title("🌤️ Forecast Weather")
-
-#     model_path = st.text_input("Model Path", DEFAULT_MODEL_PATH)
-#     input_days = st.slider("Days to Forecast", 1, PRED_LEN, min(PRED_LEN, 7))
-#     selected_targets = st.multiselect("Select Targets", ["Temperature", "Humidity", "WindSpeed"], default=["Temperature"])
-
-#     if st.button("Load Model"):
-#         with st.spinner("Loading model..."):
-#             model, meta = load_trained_forecast_model(model_path, device)
-#             if model:
-#                 st.success("Model loaded successfully!")
-#                 st.session_state.forecast_model = model
-#                 st.session_state.forecast_meta = meta
-#             else:
-#                 st.error("Failed to load model.")
-
-#     if "forecast_model" in st.session_state:
-#         if st.button("Generate Forecast"):
-#             with st.spinner("Forecasting..."):
-#                 try:
-#                     df_f = forecast_temperature(
-#                         model=st.session_state.forecast_model,
-#                         meta=st.session_state.forecast_meta,
-#                         data_path=DEFAULT_DATA_PATH,
-#                         input_days=input_days,
-#                         device=device
-#                     )
-
-#                     # Map target names
-#                     col_map = {
-#                         "Temperature": next((c for c in df_f.columns if "Temperature" in c), None),
-#                         "Humidity": next((c for c in df_f.columns if "Humidity" in c), None),
-#                         "WindSpeed": next((c for c in df_f.columns if "Wind" in c), None)
-#                     }
-#                     selected_cols = ["Date"] + [col_map[t] for t in selected_targets if col_map[t]]
-#                     df_out = df_f[selected_cols]
-
-#                     st.success("Forecast generated!")
-#                     st.dataframe(df_out)
-
-#                     fig, ax = plt.subplots(figsize=(10, 6))
-#                     for t in selected_targets:
-#                         if col_map[t]:
-#                             ax.plot(df_out["Date"], df_out[col_map[t]], label=t, marker='o')
-#                     ax.set_title("Forecast")
-#                     ax.legend()
-#                     st.pyplot(fig)
-#                 except Exception as e:
-#                     st.error(f"Forecasting failed: {e}")
-# --- Forecasting Page ---
 if page == "🌤️ Forecasting":
     st.title("🌤️ Forecast Weather")
 
