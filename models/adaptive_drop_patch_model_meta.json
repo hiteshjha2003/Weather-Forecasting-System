@@ -1,0 +1,12 @@
+{
+    "input_dim": 1,
+    "patch_size": 24,
+    "target_columns": [
+        "Temperature (C)"
+    ],
+    "seq_len": 96,
+    "pred_len": 24,
+    "embed_dim": 128,
+    "nhead": 8,
+    "num_layers": 4
+}
