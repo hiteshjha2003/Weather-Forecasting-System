@@ -112,7 +112,7 @@ flowchart TD
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/Weather-Forecasting-System.git
+git clone https://github.com/hiteshjha2003/Weather-Forecasting-System.git
 cd Weather-Forecasting-System
 ```
 
@@ -246,5 +246,6 @@ It provides an **end-to-end weather prediction solution** for data scientists an
 * SQL database integration.
 * Interactive dashboards using Streamlit and Plotly.
 * Clean, scalable project structure.
+
 
 
